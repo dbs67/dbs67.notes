@@ -1,2 +1,3 @@
 # dbs67.notes
-My private notes repository.
+
+Don B. Stringham's private notes repository.
