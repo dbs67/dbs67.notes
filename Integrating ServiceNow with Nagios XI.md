@@ -67,5 +67,39 @@ ciMonitorNames.forEach((ciMonitorName) => {gs.addInfoMessage(ciMonitorName.toStr
 
 * Created ServiceNow script include to handle the ReST requests and data sanitizing.
 
-  * Discovered that the JS `for` loop is the fast way to iterate over an array.
-  * Created a function that takes 3 arguments, array, attribute name, and value.  This seems to scan the hosts array the fastest.  In xPlore it only takes around 3-5 minutes.
+  * Discovered that the JS `for` loop is the fast way to iterate over an array.  Got the time down to 3-5 minutes.
+  * Created a function that takes 3 arguments, **array**, **attribute name**, and **value**.  This seems to scan the hosts array the fastest.  In xPlore it only takes around 3-5 minutes to process both the **hosts** and **service** array together.
+  * Finding that inserting the Javascript array of objects, ciMonitorNames, into the `u_imp_nagios` table takes a lot longer then processing jointly the **hosts** and **service** array.
+
+* Created a Nagios XI data source script that seems to take hours to load `u_imp_nagios` table.
+  * Wondering if chunking up the data into chunks of 1000 records might do the trick. Greg says about 15K is a good number.
+
+```js
+/* It's a self-executing function that loads data from Nagios XI. */
+(function loadData(import_set_table) {
+  var rest = new NagiosXiRestUtils();
+  var ciMonitorNames = rest.getCiMonitorNames(); // Runs for about 3-5 minutes.
+  var grNagiosImports = new GlideRecord("u_imp_nagios");
+  var lastUpdateDate = new GlideDateTime();
+  var chunkSize = 1000;
+
+  for (var i = 0; i < ciMonitorNames.length; i += chunkSize) {
+    var chunk = ciMonitorNames.slice(i, i + chunkSize);
+
+    chunk.forEach(function (ciMonitorName) {
+      grNagiosImports.initialize();
+      grNagiosImports.u_alias = ciMonitorName.alias;
+      grNagiosImports.u_last_update_date = lastUpdateDate;
+      grNagiosImports.u_nagios_host_id = ciMonitorName.hostId;
+      grNagiosImports.u_nagios_service_id = ciMonitorName.serviceId;
+      grNagiosImports.u_service_description = ciMonitorName.serviceDescription;
+      grNagiosImports.u_source = "Nagios XI";
+      grNagiosImports.u_source_id = ciMonitorName.sourceId;
+      grNagiosImports.setWorkflow(false);
+      grNagiosImports.insert();
+    });
+  }
+})(import_set_table);
+```
+
+* Sure enough, it did reduce the time!  Without running the transform it only took 6:03 minutes to request and load the table.  Testing it next with the transform.
