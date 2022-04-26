@@ -103,3 +103,49 @@ ciMonitorNames.forEach((ciMonitorName) => {gs.addInfoMessage(ciMonitorName.toStr
 ```
 
 * Sure enough, it did reduce the time!  Without running the transform it only took 6:03 minutes to request and load the table.  Testing it next with the transform.
+  * A side-effect of this is that the column import set was empty.
+* Realized after reading [Import Export Script Type](https://jace.pro/post/2020-02-29-ok-orlando-import-export-script-type-source) article that I was actually inserting into the **u_imp_nagios** table incorrectly.  Modified my Data Source script like this:
+
+```js
+/**
+ * Loads the data into the import_set_table.
+ * @param {GlideRecord} import_set_table - the table to load the data into.
+ * @returns None
+ */
+(function loadData(import_set_table) {
+  var rest = new NagiosXiRestUtils();
+  var ciMonitorNames = rest.getCiMonitorNames(); // Runs for about 3-5 minutes.
+  var lastUpdateDate = new GlideDateTime();
+
+  // ciMonitorNames.forEach(function (ciMonitorName) {
+  //   var map = {
+  //     u_alias: ciMonitorName.alias,
+  //     u_last_update_date: lastUpdateDate,
+  //     u_nagios_host_id: ciMonitorName.hostId,
+  //     u_nagios_service_id: ciMonitorName.serviceId,
+  //     u_service_description: ciMonitorName.serviceDescription,
+  //     u_source_id: ciMonitorName.sourceId,
+  //   };
+
+  //   import_set_table.insert(map);
+  // });
+
+  var chunkSize = 1000;
+  for (var i = 0; i < ciMonitorNames.length; i += chunkSize) {
+    var chunk = ciMonitorNames.slice(i, i + chunkSize);
+
+    chunk.forEach(function (ciMonitorName) {
+      var map = {
+        u_alias: ciMonitorName.alias,
+        u_last_update_date: lastUpdateDate,
+        u_nagios_host_id: ciMonitorName.hostId,
+        u_nagios_service_id: ciMonitorName.serviceId,
+        u_service_description: ciMonitorName.serviceDescription,
+        u_source_id: ciMonitorName.sourceId,
+      };
+
+      import_set_table.insert(map);
+    });
+  }
+})(import_set_table);
+```
