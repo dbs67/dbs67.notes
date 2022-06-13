@@ -37,29 +37,29 @@ Zend Engine v4.1.6, Copyright (c) Zend Technologies
 
 Install the `PHP Debug` extension for Visual Studio Code.
 
-![](2022-06-12-18-02-09.png)
+![](https://user-images.githubusercontent.com/2124790/173271159-79034a66-0a39-4e6f-affd-d06a54443095.png)
 
 Add this configuration to your `.vscode/launch.json` file. If `.vscode/launch.json` does not exist, create it.:
 
 ```json
 {
-  "configurations": [
-    {
-      "type": "php",
-      "request": "launch",
-      "name": "Listen for Xdebug",
-      "pathMappings": {
-        "/home/vagrant/hw05": "${workspaceFolder}",
-        "/home/vagrant/hw05/src": "${workspaceFolder}/src",
-        "/home/vagrant/hw05/test": "${workspaceFolder}/test"
-      },
-      "port": 9000,
-      "log": false,
-      "xdebugSettings": {
-        "show_hidden": 1
-      }
-    }
-  ]
+    "configurations": [
+        {
+            "type": "php",
+            "request": "launch",
+            "name": "Listen for Xdebug",
+            "pathMappings": {
+                "/home/vagrant/hw05": "${workspaceFolder}",
+                "/home/vagrant/hw05/src": "${workspaceFolder}/src",
+                "/home/vagrant/hw05/test": "${workspaceFolder}/test"
+            },
+            "port": 9000,
+            "log": false,
+            "xdebugSettings": {
+                "show_hidden": 1
+            }
+        }
+    ]
 }
 ```
 
@@ -87,7 +87,7 @@ Be sure to **change** (`cd`) to the directory where your project files are locat
 
 In Visual Studio Code, run the debug listenr:
 
-![](run_debug.png)
+![](https://user-images.githubusercontent.com/2124790/173271209-9c4ddf4b-cd94-4b7d-b3e8-c41331532b51.png)
 
 Then you can run your unit tests with either of the following commands in the **Vagrant box**:
 
