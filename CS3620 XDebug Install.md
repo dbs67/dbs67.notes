@@ -18,6 +18,10 @@ xdebug.client_host = "10.0.2.2"
 xdebug.client_port = 9000
 ```
 
+```js
+const talks = props => {}
+```
+
 Enter these commands in the terminal:
 
 ```bash
@@ -37,7 +41,7 @@ Zend Engine v4.1.6, Copyright (c) Zend Technologies
 
 Install the `PHP Debug` extension for Visual Studio Code.
 
-![](https://user-images.githubusercontent.com/2124790/173271159-79034a66-0a39-4e6f-affd-d06a54443095.png)
+![screen shot](https://user-images.githubusercontent.com/2124790/173271159-79034a66-0a39-4e6f-affd-d06a54443095.png)
 
 Add this configuration to your `.vscode/launch.json` file. If `.vscode/launch.json` does not exist, create it.:
 
