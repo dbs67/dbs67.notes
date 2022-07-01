@@ -1,3 +1,7 @@
+ 2022-07-01 00:50:12
+Status: #idea
+Tags: [[ServiceNow]] [[Nagios XI]]
+
 # Integrating ServiceNow with Nagios XI
 
 +++
@@ -149,3 +153,6 @@ ciMonitorNames.forEach((ciMonitorName) => {gs.addInfoMessage(ciMonitorName.toStr
   }
 })(import_set_table);
 ```
+
+---
+# References

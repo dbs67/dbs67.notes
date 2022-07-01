@@ -1,3 +1,9 @@
+ 2022-07-01 00:17:44
+Status: #idea
+Tags: [[hugo]]
+
+# Hugo Template
+```text
 ---
 title: TEMPLATE - Hugo page
 date: {{ time }}
@@ -14,3 +20,8 @@ title = "Title goes here"
 tags = ["tag1", "tag2", "tag3"]
 description = "Description goes here."
 +++
+```
+
+---
+# References
+

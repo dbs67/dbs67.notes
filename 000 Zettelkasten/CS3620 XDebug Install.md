@@ -1,3 +1,10 @@
+ 2022-07-01 00:27:28
+Status: #idea
+Tags: [[php]] [[weber state]] [[cs3620]]
+
+# XDebug Install
+```markdown
+
 # Install and Configure xDebug through a Vagrant Box [[weber state]] [[cs3620]]
 
 ## Install and Configure
@@ -7,6 +14,7 @@ Enter these commands in the terminal:
 ```bash
 > sudo apt install php-xdebug
 > sudo vim /etc/php/8.1/mods-available/xdebug.ini
+```
 ```
 
 Add these lines to xdebug.ini:
@@ -99,4 +107,5 @@ Then you can run your unit tests with either of the following commands in the **
 > composer test
 # or
 > vendor/bin/phpunit
+```
 ```

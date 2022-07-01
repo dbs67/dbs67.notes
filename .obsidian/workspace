@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "5724de7ecbf655d6",
+        "id": "6e3af66db6a8db91",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -36,7 +36,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#devops",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 268
   },
   "right": {
     "id": "44f6882066621452",
@@ -74,18 +74,45 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "6c00a75a9fa2cd9f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "0a39e66c9954a288",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 192,
     "collapsed": true
   },
-  "active": "5724de7ecbf655d6",
+  "active": "6e3af66db6a8db91",
   "lastOpenFiles": [
-    "weber state.md",
-    "CS3620 XDebug Install.md",
-    "202205301840_thoughtful-thoughts-md.md"
+    "000 Zettelkasten/GitHub Pages with Hugo.md",
+    "000 Zettelkasten/Integrating ServiceNow with Nagios XI.md",
+    "000 Zettelkasten/Mantra.md",
+    "000 Zettelkasten/Having Money.md",
+    "000 Zettelkasten/CS3620 XDebug Install.md",
+    "000 Zettelkasten/Hugo Template.md",
+    "000 Zettelkasten/DevSecOps.md",
+    "000 Zettelkasten/202205301840_thoughtful-thoughts-md.md",
+    "003 Templates/Core Zettel Idea.md",
+    "weber state.md"
   ]
 }

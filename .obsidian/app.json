@@ -5,5 +5,9 @@
   "showFrontmatter": true,
   "spellcheck": true,
   "vimMode": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "attachmentFolderPath": "002 Files",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "000 Zettelkasten"
 }

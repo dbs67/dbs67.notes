@@ -1,3 +1,10 @@
+ 2022-07-01 00:15:03
+Status: #idea
+Tags: [[hugo]]
+
+# GitHub Pages with Hugo
+
+```markdown
 # GitHub Pages with Hugo
 
 +++
@@ -28,3 +35,8 @@ This method requires two repositories.  The first one is *private* and the other
 {{< rawhtml >}}
     <img src="https://donbstringham.com/images/dbs67_dns.jpg" width="600" />
 {{< /rawhtml >}}
+```
+
+---
+# References
+

@@ -1,8 +1,11 @@
+ 2022-07-01 00:48:02
+Status: #idea
+Tags: [[DevOps]]
+
 # DevSecOps
+## Objectives
 
-## Objecttives
-
-1 Faster deliverery of customer value (TOV)
+1 Faster delivery of customer value (TOV)
 
 -   Time To Value
     2 Improved agility for ICS
@@ -15,12 +18,12 @@
 -   Nothing is slowing down. Why?
 -   Is ICS going to only 1 highway to the result?
 -   Standardize on an industry scrum model.
--   DevSecOps Definintion
+-   DevSecOps Defintion
     -   Methodology for delivering technology value _quickly_ and _securely_ through repeatable, flexible, and automated processes.
 
 ## The Three Ways
 
--   **Flow** - Continuously find and implement ways to improve deliverery.
+-   **Flow** - Continuously find and implement ways to improve delivery.
 -   **Feedback** - Fast feedback and work from strong failure signals.
 -   **Continuous Experiment** - Fail fast and use efficiently 1st and 2nd ways.
 
@@ -28,7 +31,7 @@
 
 -   Principle 1 - End-to-end Responsibility
 -   Principle 2 - Build in quality and security, What is quality and security?
--   Principle 3 - Encourage continous improvement
+-   Principle 3 - Encourage continuous improvement
 -   Principle 4 - Automate (almost) everything
 -   Principle 5 - Continuous Delivery (CI/CD), very, very small units of work.
 -   Principle 6 - Continuous Monitoring
@@ -98,3 +101,8 @@
 -   Set up your one-year goals and next steps toward maturity.
 
 ## Do the DevSecOps Program Retrospective
+
+---
+# References
+
+DevSecOps Second Kickoff Meeting

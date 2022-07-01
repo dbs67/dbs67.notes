@@ -1,3 +1,5 @@
 {
-  "cssTheme": "Solarized"
+  "cssTheme": "Solarized",
+  "textFontFamily": "FuraMono Nerd Font",
+  "monospaceFontFamily": "FuraMono Nerd Font"
 }
