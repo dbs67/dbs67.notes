@@ -1,4 +1,4 @@
-# Install and Configure xDebug through a Vagrant Box
+# Install and Configure xDebug through a Vagrant Box [[weber state]] [[cs3620]]
 
 ## Install and Configure
 

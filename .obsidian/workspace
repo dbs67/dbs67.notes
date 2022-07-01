@@ -1,0 +1,91 @@
+{
+  "main": {
+    "id": "6abf9f2fbabce6b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "5724de7ecbf655d6",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9004018037c1cda2",
+    "type": "split",
+    "children": [
+      {
+        "id": "3080bfee44f05d29",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bfe73c6640915a34",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "bd742e7a7ec9e5ab",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "44f6882066621452",
+    "type": "split",
+    "children": [
+      {
+        "id": "75ea2d5b68fad9a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "193e5d75e6473c75",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "5724de7ecbf655d6",
+  "lastOpenFiles": [
+    "weber state.md",
+    "CS3620 XDebug Install.md",
+    "202205301840_thoughtful-thoughts-md.md"
+  ]
+}
